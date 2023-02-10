@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ric and Morthy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header__logo">Rick and Morty info</div>
+            <div class="header__section">
+                <div class="header__section__page" id="header__section__page__characters">Characters</div>
+                <div class="header__section__page" id="header__section__page__episodes">Episodes</div>
+                <div class="header__section__page" id="header__section__page__locations">Locations</div>
+                <div class="header__section__page" id="header__section__page__watchList">My watch list</div>
+            </div>
+        </header>
+        <div class="container charachters__container">
+            <div class="card">
+             <img class="avatar" src="" alt="">
+            <div class="cardName">Aboba</div>
+            <button class="infoBtn">info</button>
+            </div>
+        </div>
+        <div class="container episode__container container__table">
+            <table class="episode__container__table">
+                <tr class="episode__row">
+                    <th class="episode__row__val">Id</th>
+                    <th class="episode__row__val">Episode</th>
+                    <th class="episode__row__val">Name</th>
+                    <th class="episode__row__val">Released</th>
+                    <th class="episode__row__val">Characters</th>
+                   </tr>
+            </table>
+           
+        </div>
+
+        <div class="container location__container container__table">
+            <table class="location__container__table">
+                <tr class="episode__row">
+                    <th class="episode__row__val episode__row__val__id">Id</th>
+                    <th class="episode__row__val">Name</th>
+                    <th class="episode__row__val">Type</th>
+                    <th class="episode__row__val">Dimension</th>
+                    <th class="episode__row__val">Residents</th>
+                   </tr>
+            </table>
+           
+        </div>
+        <div class="container myWatchList">
+            <!-- <div class="myWatchList__box">
+                <div class="myWatchList__box__text">Aboba</div>
+                <div class="myWatchList__box__btns">
+                    <img class="myWatchList__box__btns__btn myWatchList__box__btns__status" src="./img/tickBlack.png" alt="">
+                    <img class="myWatchList__box__btns__btn myWatchList__box__btns__delete" src="./img/basket.png" alt="">
+                </div>
+            </div> -->
+           
+        </div>
+
+
+        <div class="controls">
+            <button class="btn" id="prevBtn">Back</button>
+            <button class="btn filter" id="filters__charachter">Filters</button>
+            <button class="btn filter" id="filters__episode">Filters</button>
+            <button class="btn filter" id="filters__locations">Filters</button>
+            <button class="btn filter" id="add__myWatchList">Add new item</button>
+            <button class="btn" id="nextBtn">Next</button>
+
+        </div>
+    </div>
+
+    <div class="poup poup__watchList">
+        <div class="poup__episode__filter__text">Enter name of Episode you want watch:</div>
+        <input class="poup__episode__filter__inp" id="poup__episode__list__inp" type="text" placeholder="Episode">
+        <button class="btn" id="apply__list">Apply</button>
+         </div>
+
+    <div class="poup poup__episode__filter">
+   <div class="poup__episode__filter__text">Enter name of Episode:</div>
+   <input class="poup__episode__filter__inp" id="poup__episode__filter__inp" type="text" placeholder="Episode">
+   <button class="btn" id="apply__episodes">Apply</button>
+    </div>
+
+    <div class="poup poup__location__filter">
+        <div class="poup__episode__filter__text">Enter name of Location:</div>
+        <input class="poup__episode__filter__inp" id="poup__location__filter__inp" type="text" placeholder="Location">
+        <div class="poup__charaachter__filters__filter__text">Type:</div>
+        <select name="poup__location__filters__filter__section__type" class="poup__charaachter__filters__filter__section poup__location__filters__filter__section__type" id="poup__location__filters__filter__section__type">
+            <option class="poup__charaachter__filters__filter__section__option" value="">None</option>
+       
+        </select>
+        <div class="poup__charaachter__filters__filter__text">Dimension:</div>
+        <select name="poup__location__filters__filter__section__dimension" class="poup__charaachter__filters__filter__section poup__location__filters__filter__section__dimension" id="poup__location__filters__filter__section__dimension">
+            <option class="poup__charaachter__filters__filter__section__option" value="">None</option>
+       
+        </select>
+        <button class="btn" id="apply__location">Apply</button>
+         </div>
+
+
+
+    <div class="poup poup__charachter__info">
+        <img class="avatar poup__img" id="poup__img" src="" alt="img">
+        <div class="cardName poup__name"id="poup__name">Aboba</div>
+   <div class="poup__group">
+    <div class="poup__group__gender poup__group__item">Gender:</div>
+    <div class="poup__group__status poup__group__item">Status:</div>
+    <div class="poup__group__location poup__group__item">Location:</div>
+   </div>
+   <div class="poup__episods">
+    <div class="poup__episods__text">Took part in episods:</div>
+    <div class="poup__episods__numbers">1,2,3,4,5</div>
+   </div>
+    </div>
+
+
+    
+    <div class="poup poup__charaachter__filters">
+        <div class="poup__charaachter__filters__filter">
+            <div class="poup__charaachter__filters__filter__text">Status:</div>
+            <select name="poup__charaachter__filters__filter__section__status" class="poup__charaachter__filters__filter__section poup__charaachter__filters__filter__section__status" id="poup__charaachter__filters__filter__section__status">
+                <option class="poup__charaachter__filters__filter__section__option" value="">None</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&status=alive">Alive</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&status=dead">Dead</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&status=unknown">Unknown</option>
+            </select>
+        </div>
+        <div class="poup__charaachter__filters__filter">
+            <div class="poup__charaachter__filters__filter__text">Species:</div>
+            <select name="poup__charaachter__filters__filter__section__species" class="poup__charaachter__filters__filter__section poup__charaachter__filters__filter__section__species" id="poup__charaachter__filters__filter__section__species">
+                <option class="poup__charaachter__filters__filter__section__option" value="">None</option>
+
+            </select>
+        </div>
+        <div class="poup__charaachter__filters__filter">
+            <div class="poup__charaachter__filters__filter__text">Gender:</div>
+            <select name="poup__charaachter__filters__filter__section__gender" class="poup__charaachter__filters__filter__section poup__charaachter__filters__filter__section__gender" id="poup__charaachter__filters__filter__section__gender">
+                <option class="poup__charaachter__filters__filter__section__option" value="">None</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&gender=female">Female</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&gender=male">Male</option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&gender=genderless ">Genderless </option>
+                <option class="poup__charaachter__filters__filter__section__option" value="&gender=unknown">Unknown</option>
+            </select>
+        </div>
+        <button class="btn poup__charaachter__filters__btn">Apply</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
