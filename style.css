@@ -298,7 +298,7 @@ left: 3%;
     }
     .container__table{
         /* padding-left: 160px; */
-        display: flex;
+      
         justify-content: flex-start;
     }
 }
